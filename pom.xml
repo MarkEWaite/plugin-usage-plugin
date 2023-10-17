@@ -8,7 +8,7 @@
 
   <properties>
     <java.version>11</java.version>
-    <jenkins.version>2.375.4</jenkins.version>
+    <jenkins.version>2.387.3</jenkins.version>
   </properties>
 
   <name>Plugin Usage - Plugin</name>
@@ -28,6 +28,7 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>conditional-buildstep</artifactId>
+      <!-- incompatible changes in later releases of conditionalbuildstep plugin -->
       <version>1.2</version>
       <optional>true</optional>
     </dependency>
@@ -53,7 +54,6 @@
     <dependency>
       <groupId>org.jenkins-ci.main</groupId>
       <artifactId>maven-plugin</artifactId>
-      <version>3.0</version>
       <optional>true</optional>
     </dependency>
 
@@ -86,14 +86,9 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>commons-net</groupId>
-        <artifactId>commons-net</artifactId>
-        <version>3.9.0</version>
-      </dependency>
-      <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.375.x</artifactId>
-        <version>2198.v39c76fc308ca</version>
+        <artifactId>bom-2.387.x</artifactId>
+        <version>2507.vcb_18c56b_f57c</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
